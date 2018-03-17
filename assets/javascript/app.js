@@ -27,6 +27,7 @@ function generateHTML() {
 	$(".gameBoard").html(gameHTML);
 }
 
+//generates the scoreboard post end of game
 function generateScore() {
   var finalScore = correct.length;
   var finalPossible = game.answers.length;
@@ -85,11 +86,13 @@ var countQ = 0;
 var intervalId;
 var correct =[];
 
+//object I am transitioning to using for the game
   var game = {
     questions: ['Who is the GOAT?','Who will win the championship?','Who is the best rookie?','Will the spurs make the playoffs?'],
     answers:[['jordan','kareem','shaq','kobe'],['warriors','cavs','heat','rockets'],['mitchell','simmons','kuzma','lonzo',],['no','yes','no','no']],
     score: 0,
 
+    // timeboard functionality
     run: function() {
     //  The decrement function().
       
