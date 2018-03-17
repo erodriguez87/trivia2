@@ -31,7 +31,7 @@ function generateScore() {
   var finalScore = correct.length;
   var finalPossible = game.answers.length;
 
-	gameHTML = 'Final score of' + "<div class='score'>" + finalScore + "out of "+finalPossible+"</div>";
+	gameHTML = 'Final score of ' + "<div class='score'>" + finalScore + " out of "+finalPossible+"</div>";
 	$(".gameBoard").html(gameHTML);
 }
 
@@ -55,22 +55,24 @@ $("body").on("click",".D", function(event){
 });
 
 function scoreCheck(){
-  if (countQ <= answers.length){
-    for (i = 0; i< answers.length;i++){
+  var lenA = (answers.length - 1);
+  console.log('length of answers' + lenA);
+  if (countQ < lenA){
+    for (i = 0; i< lenA;i++){
       if (userResponse === game.answers[countQ][i]){
         correct.push(userResponse);
         console.log('logging the array of correct answers' + correct);
         // generateHTML();
       } else if (userResponse != game.answers[countQ][i]){
         console.log('do better next time');    
-        console.log(countQ);
       // generateHTML();
       }
     }
       countQ++;
+      console.log('answers length ' + lenA-1)
       console.log('logging what question i am on ' + countQ);
       generateHTML();
-  } else if (countQ > answers.length) {
+  } else if (countQ >= lenA) {
     // generates a scoreboard after looping through all the questions
     console.log('end of game');
     generateScore();
