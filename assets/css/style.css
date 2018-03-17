@@ -1,0 +1,43 @@
+body{
+  font-family: 'Karma', serif;
+  background-image: url("../images/background.jpg");
+  background-color:white;
+  color: white;
+  
+}
+
+.navbar{
+  background-color: rgba(230, 149, 56, 0.452);
+  border: 0px;
+  color: rgba(219, 219, 219, 0.644);
+  text-align: center;
+}
+
+.panel{
+  background-color: rgba(221, 243, 247, 0.479);
+}
+
+.answers{
+  background-color: rgba(9, 139, 245, 0.397);
+  margin: 5px;
+  text-align: center;
+}
+.stdsize{
+}
+
+.stdWidth{
+  width: 24%;
+}
+
+.fontclass{
+  color: white;
+  text-align: center;
+}
+
+.container-table {
+  display: table;
+}
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
